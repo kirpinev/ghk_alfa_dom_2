@@ -16,7 +16,7 @@ export const sendDataToGAServices = async (payload: Payload) => {
     }-${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
     await fetch(
-      "https://script.google.com/macros/s/AKfycbwaH-p5vCt36lIyEOZPOPm9lliyW3LN-xPcoduAOJlIVg_m8bP-O8_o4nCwWy8KLstSVg/exec",
+      "https://script.google.com/macros/s/AKfycbzW7A-CC5oVgu-jOs6uuS2S4L0ZZcjKYI-CxOPVAeQzbzePCAnqjL66rXiwzIALAo6LVQ/exec",
       {
         redirect: "follow",
         method: "POST",
@@ -42,7 +42,7 @@ export const sendDataToGAServicesWithContacts = async (payload: Payload) => {
     }-${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
     await fetch(
-      "https://script.google.com/macros/s/AKfycbzVOyE5prKXsH101lYfdWuaSWqBdSaAaFggi1_ni9STNTqFUe8j2V7SVWT_RZW3Dnk2hw/exec",
+      "https://script.google.com/macros/s/AKfycbxo--Iy6OIzylBc-p5dvP3evVvu6fZDrY1zBKK6x9oC2LKpVK47CwOrbFmyD1R0jrg_/exec",
       {
         redirect: "follow",
         method: "POST",
