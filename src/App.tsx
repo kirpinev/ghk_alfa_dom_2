@@ -12,11 +12,14 @@ import { LS, LSKeys } from "./ls";
 import { sendDataToGAServices } from "./utils/events.ts";
 import { Services, Service } from "./types.ts";
 import { preparePayload } from "./utils/payload.ts";
-import { services } from "./constants.ts";
+import { shortServices, longServices } from "./constants.ts";
 import { getRandomServices } from "./utils/get-random-services.ts";
 import { ThankYou } from "./thx/ThankYou.tsx";
 
-const randomServices = getRandomServices(services);
+const randomServices = [
+  ...getRandomServices(shortServices),
+  ...getRandomServices(longServices),
+];
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -93,11 +96,7 @@ export const App = () => {
         <Gap size={24} />
 
         <div>
-          <Swiper
-            ref={swiperRef}
-            style={{ marginLeft: "0" }}
-            slidesPerView="auto"
-          >
+          <Swiper ref={swiperRef} slidesPerView="auto">
             {randomServices.map((service) => {
               const tabCount = selectedItems.filter(
                 (selectedItem) =>

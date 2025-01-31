@@ -1,4 +1,4 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 
 const container = style({
@@ -80,7 +80,7 @@ const swSlide = recipe({
     transition: "all .25s ease",
     display: "flex",
     alignItems: "center",
-    marginRight: "16px",
+    marginRight: "12px",
     "@media": {
       "(max-width: 360px)": {
         fontSize: "14px",
@@ -102,14 +102,6 @@ const swSlide = recipe({
       },
     },
   },
-});
-
-globalStyle(`.swiper-slide:last-of-type`, {
-  marginRight: "24px",
-});
-
-globalStyle(`.swiper-slide:first-of-type`, {
-  marginLeft: "16px",
 });
 
 const serviceContainer = style({
